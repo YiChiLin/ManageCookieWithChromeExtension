@@ -1,11 +1,14 @@
 new Vue({
 			el: "#extension-cookie-management-vue",
 			data:{
+				cookies : []
+			},
+			created: function(){
+				this.cookies = this.getCookie();
 			},			
 			methods: {			
 				getCookie(){
 					if(document.cookie === "") return [];
-								
 					return document.cookie.split("; ").map(cookie => {
 						const [name, value] = cookie.split("=");
 						return {name, value};
@@ -25,7 +28,9 @@ new Vue({
 			template: ` 
 				<div class="extension-cookie-management-container">
 					<!-- start here!!! -->
-					<h1>You should see these word in your browser! let change this to your real code!</h1>
+					<ul>
+						<li v-for="cookie in cookies">{{cookie.name}}:{{cookie.value}}</li>
+					</ul>
 				</div>
 			`
 		});

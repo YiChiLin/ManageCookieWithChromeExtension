@@ -30,7 +30,7 @@ class NativeCookieManagement{
 		
 		// start here!!! 
 		const sampleCode = document.createElement("H1");
-		sampleCode.textContent = "You should see these word in your browser! let change this to your real code! ";
+		//sampleCode.textContent = "You should see these word in your browser! let change this to your real code! ";
 		container.appendChild(sampleCode);
 				
 		

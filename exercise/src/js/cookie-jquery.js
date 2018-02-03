@@ -23,16 +23,14 @@ class JQueryCookieManagement{
 	
 	constructor()
 	{
-		
-		const container = $("<div>", { class: "extension-cookie-management-container"});	
-		
-		
-		
-		// start here!!! 
-		container.append($("<h1>",{text: "You should see these word in your browser! let change this to your real code! "}));
-		
-		
-		
+		var dic = this.getCookie();
+		const container = $("<div>", { class: "extension-cookie-management-container"});
+		var ul = $("<ul>");
+		dic.forEach(element => {
+			var li = $("<li>", { text: `${element.name} : ${element.value}`});
+			ul.append(li)
+		});
+		container.append(ul);	
 		$("#extension-cookie-management-jquery").append(container);
 	}
 }
