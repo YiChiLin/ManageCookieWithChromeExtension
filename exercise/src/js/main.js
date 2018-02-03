@@ -11,8 +11,8 @@ if(!document.getElementById(`extension-cookie-management-name`))
 }
 
 
-const allJS = ["native", "jquery", "react", "angular", "vue"];
-
+//const allJS = ["native", "jquery", "react", "angular", "vue"];
+const allJS = ["vue"];
 allJS.map((js) => {
 	if(!document.getElementById(`extension-cookie-management-${js}`))
 	{
